@@ -2,9 +2,9 @@ using UnityEngine;
 
 namespace DefaultNamespace
 {
-    public class ProductPresenter: IProductPresenter
+    public class ProductPresenter : MonoBehaviour //IProductPresenter
     {
-        public string Title { get; }
+        /* public string Title { get; }
         public string Description { get; }
         public Sprite Icon { get; }
         public string MoneyPrice { get; }
@@ -18,7 +18,7 @@ namespace DefaultNamespace
             MoneyPrice = productInfo.MoneyPrice.ToString();
             CanBuy = productBuyer.CanBuy(productInfo, moneyStorage);
         }
-        
+        */
         public void Buy()
         {
             
