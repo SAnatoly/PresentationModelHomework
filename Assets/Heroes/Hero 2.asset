@@ -10,8 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 29a2f35999cb6244f99359153663dbba, type: 3}
-  m_Name: HVtgcyuh
+  m_Name: Hero 2
   m_EditorClassIdentifier: 
-  Name: fbgber
-  Descripton: iojuniuhfewiu hiuhvieurvh iuehrgfvipeube8iub iubev8erbrvie ieurbgveirpubvr
-  icon: {fileID: 21300000, guid: 954d79ad0f5124da59b33552ab47a641, type: 3}
+  Name: Varvar
+  Descripton: Like Hulk
+  icon: {fileID: 21300000, guid: 7c0892898786946a98a1057c9873611a, type: 3}
+  level: 54
+  xp: 1500
+  needXp: 5000

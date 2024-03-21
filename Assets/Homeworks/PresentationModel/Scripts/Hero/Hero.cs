@@ -48,6 +48,10 @@ namespace Lessons.Architecture.PM
         public Sprite icon;
         [SerializeField]
         public CharacterStat[] stats;
+
+        public int level;
+        public int xp;
+        public int needXp;
     }
 }
 

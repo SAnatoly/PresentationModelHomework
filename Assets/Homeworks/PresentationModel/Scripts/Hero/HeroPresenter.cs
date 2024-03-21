@@ -9,7 +9,9 @@ namespace Lessons.Architecture.PM
         public string description => hero.Descripton;
 
         public Sprite icon => hero.icon;
-
+        public int level => hero.level;
+        public int xp => hero.xp;
+        public int RequiredExperience { get; }
         public CharacterStat[] characterStats => hero.stats;
 
         private readonly Hero hero;
