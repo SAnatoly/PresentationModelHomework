@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Lessons.Architecture.PM
-{
+
     public class HeroPresenter : IHeroPresenter
     {
         public string Name => hero.Name;
@@ -21,5 +20,5 @@ namespace Lessons.Architecture.PM
             hero = _hero;
         }
     }
-}
+
 

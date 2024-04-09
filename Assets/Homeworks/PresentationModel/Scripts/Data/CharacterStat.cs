@@ -2,9 +2,7 @@ using System;
 using Unity.VisualScripting;
 using UnityEngine;
 
-namespace Lessons.Architecture.PM
-{
-    
+
     public sealed class CharacterStat
     {
         public event Action<int> OnValueChanged; 
@@ -20,4 +18,3 @@ namespace Lessons.Architecture.PM
             this.OnValueChanged?.Invoke(value);
         }
     }
-}

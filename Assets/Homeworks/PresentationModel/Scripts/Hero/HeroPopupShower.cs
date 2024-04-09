@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
 
-namespace Lessons.Architecture.PM
-{
-    public class HeroPopupShower: MonoBehaviour
+
+    public class HeroPopupShowerf: MonoBehaviour
     {
         public HeroPopup heroPopup;
         public IHeroPresenter heroPresenter;
@@ -10,7 +9,7 @@ namespace Lessons.Architecture.PM
         public void Show(Hero _hero)
         {
             heroPresenter = new HeroPresenter(_hero);
-            heroPopup.Show(heroPresenter);
+            //heroPopup.Show(heroPresenter);
         }
 
         public void Hide()
@@ -18,5 +17,5 @@ namespace Lessons.Architecture.PM
             heroPopup.Hide();
         }
     }
-}
+
 

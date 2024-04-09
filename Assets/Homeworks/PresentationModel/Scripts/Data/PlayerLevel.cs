@@ -1,7 +1,6 @@
 using System;
 
-namespace Lessons.Architecture.PM
-{
+
     public sealed class PlayerLevel
     {
         public event Action OnLevelUp;
@@ -11,6 +10,11 @@ namespace Lessons.Architecture.PM
 
         public int CurrentExperience { get; private set; }
 
+        public PlayerLevel(int currentLevel, int currentExperience)
+        {
+            
+        }
+        
         public int RequiredExperience
         {
             get { return 100 * (this.CurrentLevel + 1); }
@@ -38,4 +42,3 @@ namespace Lessons.Architecture.PM
             return this.CurrentExperience == this.RequiredExperience;
         }
     }
-}

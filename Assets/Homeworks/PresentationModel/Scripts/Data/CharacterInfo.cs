@@ -2,8 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Lessons.Architecture.PM
-{
+
     public sealed class CharacterInfo
     {
         public event Action<CharacterStat> OnStatAdded;
@@ -12,7 +11,12 @@ namespace Lessons.Architecture.PM
        
         private readonly HashSet<CharacterStat> stats = new();
 
-       
+
+        public CharacterInfo(HashSet<CharacterStat> stats)
+        {
+            
+        }
+        
         public void AddStat(CharacterStat stat)
         {
             if (this.stats.Add(stat))
@@ -48,4 +52,3 @@ namespace Lessons.Architecture.PM
             return this.stats.ToArray();
         }
     }
-}

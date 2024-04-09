@@ -1,8 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace Lessons.Architecture.PM
-{
+
     public sealed class UserInfo
     {
         public event Action<string> OnNameChanged;
@@ -17,6 +16,12 @@ namespace Lessons.Architecture.PM
 
         public Sprite Icon { get; private set; }
 
+
+        public UserInfo(string name, string description, Sprite icon)
+        {
+            
+        }
+        
         public void ChangeName(string name)
         {
             this.Name = name;
@@ -35,4 +40,3 @@ namespace Lessons.Architecture.PM
             this.OnIconChanged?.Invoke(icon);
         }
     }
-}

@@ -1,8 +1,7 @@
-using Lessons.Architecture.PM;
+
 using UnityEngine;
 
-namespace Homeworks.PresentationModel.User
-{
+
     public class UserInfoPresenter: IUserInfoPresenter
     {
         public string name { get; }
@@ -16,4 +15,3 @@ namespace Homeworks.PresentationModel.User
             icon = _userInfo.Icon;
         }
     }
-}

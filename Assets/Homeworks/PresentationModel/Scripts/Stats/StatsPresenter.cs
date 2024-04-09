@@ -1,5 +1,4 @@
-namespace Lessons.Architecture.PM.Stats
-{
+
     public class StatsPresenter: IStatsPresenter
     {
         public string name { get; }
@@ -16,4 +15,3 @@ namespace Lessons.Architecture.PM.Stats
             characterStat.ChangeValue(value);
         }
     }
-}

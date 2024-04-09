@@ -1,5 +1,4 @@
-namespace Lessons.Architecture.PM
-{
+
     public class LevelPresenter : ILevelPresenter
     {
         public int level => playerLevel.CurrentLevel;
@@ -16,4 +15,3 @@ namespace Lessons.Architecture.PM
             playerLevel.LevelUp();
         }
     }
-}

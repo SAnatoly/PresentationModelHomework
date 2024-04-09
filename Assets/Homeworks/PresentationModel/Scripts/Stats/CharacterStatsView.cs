@@ -1,8 +1,6 @@
 using TMPro;
 using UnityEngine;
 
-namespace Lessons.Architecture.PM.Stats
-{
     public class CharacterStatsView: MonoBehaviour
     {
         public TMP_Text name;
@@ -19,4 +17,3 @@ namespace Lessons.Architecture.PM.Stats
             presenter.ChangeValue();
         }
     }
-}

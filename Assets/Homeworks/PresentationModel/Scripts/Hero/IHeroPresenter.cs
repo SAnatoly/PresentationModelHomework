@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Lessons.Architecture.PM
-{
+
     public interface IHeroPresenter
     {
         string Name { get; }
@@ -12,5 +11,5 @@ namespace Lessons.Architecture.PM
         int RequiredExperience { get; }
         CharacterStat[] characterStats { get; }
     }
-}
+
 

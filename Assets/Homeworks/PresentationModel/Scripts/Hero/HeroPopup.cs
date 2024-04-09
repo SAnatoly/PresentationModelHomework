@@ -3,9 +3,9 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-namespace Lessons.Architecture.PM
-{
-    public class HeroPopup: MonoBehaviour
+
+
+    public class HeroPopupf: MonoBehaviour
     {
         [SerializeField] private TMP_Text name;
         [SerializeField] private TMP_Text discription;
@@ -44,5 +44,5 @@ namespace Lessons.Architecture.PM
             gameObject.SetActive(false);
         }
     }
-}
+
 

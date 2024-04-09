@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Lessons.Architecture.PM
-{
+
     /* public class HeroPopupView: MonoBehaviour
      {
          public Sprite icon;
@@ -53,5 +52,5 @@ namespace Lessons.Architecture.PM
         public int xp;
         public int needXp;
     }
-}
+
 
