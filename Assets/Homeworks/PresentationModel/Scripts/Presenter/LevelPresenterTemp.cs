@@ -1,7 +1,8 @@
 using System;
+using UnityEngine;
 
 
-    public class LevelPresenterTemp : ILevelPresenterTemp
+public class LevelPresenterTemp : ILevelPresenterTemp
     {
         private readonly PlayerLevel level;
         public event Action dataChanged; 
@@ -31,7 +32,7 @@ using System;
         {
             LevelText = $"XP: {level.CurrentExperience}/{level.RequiredExperience}";
             Progress = level.CurrentExperience / (float)level.RequiredExperience;
-            
+            Debug.Log("Refresh");
             dataChanged?.Invoke();
         }
     }

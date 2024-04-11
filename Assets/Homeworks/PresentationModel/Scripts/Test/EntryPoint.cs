@@ -15,13 +15,12 @@ using UnityEngine.UI;
         [SerializeField] private HeroData heroData; 
         public void Start()
         {
-            for (int i = 0; i < new List<int>().Count; i++)
-            {
+            
                 var info = new CharacterInfo(new HashSet<CharacterStat>());
                 var level = new PlayerLevel(100, 1);
                 var userInfo = new UserInfo(heroData.name, heroData.description, heroData.icon);
                 
-                
+                Debug.Log(level.CurrentLevel + " " + level.CurrentExperience);
             
                 var levelPresenter = new LevelPresenterTemp(level);
                 var userInfoPresenter = new UserInfoPresenter(userInfo);
@@ -30,7 +29,8 @@ using UnityEngine.UI;
                 var button = Instantiate(openHeroPrefab, buttonsParent);
             
                 button.onClick.AddListener(() => OpenPopup(playerPresenter));
-            }
+                Debug.Log("Enter");
+            
             
         }
 

@@ -1,7 +1,8 @@
 using System;
+using UnityEngine;
 
 
-    public sealed class PlayerLevel
+public sealed class PlayerLevel
     {
         public event Action OnLevelUp;
         public event Action<int> OnExperienceChanged;
@@ -12,7 +13,9 @@ using System;
 
         public PlayerLevel(int currentLevel, int currentExperience)
         {
-            
+            CurrentLevel = currentLevel;
+            CurrentExperience = currentExperience;
+            Debug.Log(CurrentLevel + "  " + CurrentExperience);
         }
         
         public int RequiredExperience

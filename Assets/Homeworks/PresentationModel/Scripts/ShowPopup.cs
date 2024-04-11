@@ -8,9 +8,6 @@ namespace Homeworks.PresentationModel.Scripts
         public LevelView LevelView;
         public UserInfoView UserInfoView;
         
-        public void ShowPopup()
-        {
-            
-        }
+       
     }
 }

@@ -24,5 +24,6 @@ using UnityEngine.UI;
         {
             levelText.text = levelPresenterTemp.LevelText;
             progress.fillAmount = levelPresenterTemp.Progress;
+            Debug.Log("FFFFF");
         }
     }

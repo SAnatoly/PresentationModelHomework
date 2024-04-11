@@ -7,6 +7,10 @@ using UnityEngine;
         [SerializeField] private LevelView levelViewPrefab;
         [SerializeField] private UserInfoView userInfoViewPrefab;
 
+
+        public LevelView levelView;
+        public UserInfoView userInfoView;
+        
         public void Start()
         {
             gameObject.SetActive(false);
@@ -14,18 +18,18 @@ using UnityEngine;
 
         public void Show(IPlayerPresenter presenter)
         {
-            var levelView = Instantiate(levelViewPrefab, transform);
-            var userInfoView = Instantiate(userInfoViewPrefab, transform);
+            //var levelView = Instantiate(levelViewPrefab, transform);
+            //var userInfoView = Instantiate(userInfoViewPrefab, transform);
             
             levelView.Render(presenter.LevelPresenter);
             levelView.Refresh();
             userInfoView.Show(presenter.InfoPresenter);
-            gameObject.SetActive(true);
+            //gameObject.SetActive(true);
         }
 
         public void Hide()
         {
-            gameObject.SetActive(false);
+           // gameObject.SetActive(false);
         }
     }
 

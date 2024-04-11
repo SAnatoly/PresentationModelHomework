@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e1b117130c4425dac77719413ddc0aa, type: 3}
   m_Name: 1
   m_EditorClassIdentifier: 
-  name: 
-  description: 
-  icon: {fileID: 0}
+  name: KJu
+  description: wr87ifgboweibveoweubvoweuib
+  icon: {fileID: 21300000, guid: 7c0892898786946a98a1057c9873611a, type: 3}
   stats:
-  - nameStats: 
-    stats: 
-  - nameStats: 
-    stats: 
+  - nameStats: rewyhey
+    stats: 43
+  - nameStats: gesdhg
+    stats: 321
