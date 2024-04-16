@@ -9,11 +9,13 @@ public class LevelPresenterTemp : ILevelPresenterTemp
         
         public string LevelText { get; private set; }
         public float Progress { get; private set; }
+        public string ProgressText { get; private set; }
 
         public LevelPresenterTemp(PlayerLevel level)
         {
             this.level = level;
-            
+            Debug.Log(this.level.CurrentLevel);
+            Refresh();
             this.level.OnLevelUp += OnLevelUp;
             this.level.OnExperienceChanged += OnExperienceChanged;
         }
@@ -30,7 +32,8 @@ public class LevelPresenterTemp : ILevelPresenterTemp
         
         private void Refresh()
         {
-            LevelText = $"XP: {level.CurrentExperience}/{level.RequiredExperience}";
+            LevelText = $"LVL: {level.CurrentLevel}";
+            ProgressText = $"XP: {level.CurrentExperience}/{level.RequiredExperience}";
             Progress = level.CurrentExperience / (float)level.RequiredExperience;
             Debug.Log("Refresh");
             dataChanged?.Invoke();

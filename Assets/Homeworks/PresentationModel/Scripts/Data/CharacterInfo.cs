@@ -14,7 +14,7 @@ using System.Linq;
 
         public CharacterInfo(HashSet<CharacterStat> stats)
         {
-            
+            this.stats = stats;
         }
         
         public void AddStat(CharacterStat stat)

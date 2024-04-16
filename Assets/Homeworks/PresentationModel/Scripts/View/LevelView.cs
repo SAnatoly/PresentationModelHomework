@@ -7,23 +7,26 @@ using UnityEngine.UI;
     {
         [SerializeField]
         private TMP_Text levelText;
+        [SerializeField]
+        private TMP_Text experinceText;
 
         [SerializeField]
         private Image progress;
         
-        private ILevelPresenterTemp levelPresenterTemp;
+        
 
         public void Render(ILevelPresenterTemp levelPresenter)
         {
-            levelPresenterTemp = levelPresenter;
             
-            levelPresenter.dataChanged += Refresh;
+            levelPresenter.dataChanged += () => Refresh(levelPresenter);
         }
 
-        public void Refresh()
+        public void Refresh(ILevelPresenterTemp levelPresenter)
         {
-            levelText.text = levelPresenterTemp.LevelText;
-            progress.fillAmount = levelPresenterTemp.Progress;
-            Debug.Log("FFFFF");
+            levelText.text = levelPresenter.LevelText;
+            experinceText.text = levelPresenter.ProgressText;
+            progress.fillAmount = levelPresenter.Progress;
+            Debug.Log("JJJ");
+            
         }
     }

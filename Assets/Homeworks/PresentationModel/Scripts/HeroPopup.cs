@@ -1,8 +1,9 @@
 ﻿
 using UnityEngine;
+using UnityEngine.UI;
 
 
-    public class HeroPopup: MonoBehaviour
+public class HeroPopup: MonoBehaviour
     {
         [SerializeField] private LevelView levelViewPrefab;
         [SerializeField] private UserInfoView userInfoViewPrefab;
@@ -10,26 +11,28 @@ using UnityEngine;
 
         public LevelView levelView;
         public UserInfoView userInfoView;
-        
+
+        [SerializeField] private Button closeButton;
+
+        [SerializeField] private GameObject popup;
         public void Start()
         {
-            gameObject.SetActive(false);
+            popup.SetActive(false);
         }
 
         public void Show(IPlayerPresenter presenter)
         {
-            //var levelView = Instantiate(levelViewPrefab, transform);
-            //var userInfoView = Instantiate(userInfoViewPrefab, transform);
-            
+            levelView.Refresh(presenter.LevelPresenter);
             levelView.Render(presenter.LevelPresenter);
-            levelView.Refresh();
             userInfoView.Show(presenter.InfoPresenter);
-            //gameObject.SetActive(true);
+            closeButton.onClick.AddListener(Hide);
+            popup.SetActive(true);
         }
 
         public void Hide()
         {
-           // gameObject.SetActive(false);
+           popup.SetActive(false);
+           closeButton.onClick.RemoveListener(Hide);
         }
     }
 

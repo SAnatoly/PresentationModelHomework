@@ -16,6 +16,7 @@ using UnityEngine.UI;
             name.text = presenter.name;
             description.text = presenter.description;
             icon.sprite = presenter.icon;
+            Debug.Log("INFO");
         }
 
         public void Hide()

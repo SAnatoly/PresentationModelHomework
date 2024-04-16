@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 
@@ -16,5 +17,5 @@ using UnityEngine;
     public class StatsHero
     {
         public string nameStats;
-        public string stats;
+        public int value;
     }

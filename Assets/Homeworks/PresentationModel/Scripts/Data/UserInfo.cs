@@ -19,7 +19,9 @@ using UnityEngine;
 
         public UserInfo(string name, string description, Sprite icon)
         {
-            
+            Name = name;
+            Description = description;
+            Icon = icon;
         }
         
         public void ChangeName(string name)

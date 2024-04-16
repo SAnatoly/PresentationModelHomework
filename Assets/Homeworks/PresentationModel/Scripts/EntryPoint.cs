@@ -16,12 +16,15 @@ using UnityEngine.UI;
         public void Start()
         {
             
-                var info = new CharacterInfo(new HashSet<CharacterStat>());
+               // var[] stat = new CharacterStat();
                 var level = new PlayerLevel(100, 1);
                 var userInfo = new UserInfo(heroData.name, heroData.description, heroData.icon);
                 
-                Debug.Log(level.CurrentLevel + " " + level.CurrentExperience);
-            
+                Debug.Log(userInfo.Name);
+
+               
+               
+               // var infoPresenter = new StatsPresenter(stat);
                 var levelPresenter = new LevelPresenterTemp(level);
                 var userInfoPresenter = new UserInfoPresenter(userInfo);
                 var playerPresenter = new PlayerPresenter(levelPresenter, userInfoPresenter);
@@ -29,13 +32,14 @@ using UnityEngine.UI;
                 var button = Instantiate(openHeroPrefab, buttonsParent);
             
                 button.onClick.AddListener(() => OpenPopup(playerPresenter));
-                Debug.Log("Enter");
+                
             
             
         }
 
         private void OpenPopup(IPlayerPresenter playerPresenter)
         {
+            Debug.Log(playerPresenter.InfoPresenter.name);
             heropoup.Show(playerPresenter);
         }
     }

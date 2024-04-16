@@ -8,4 +8,5 @@ using System;
         
         public string LevelText { get; }
         public float Progress { get; }
+        public string ProgressText { get; }
     }

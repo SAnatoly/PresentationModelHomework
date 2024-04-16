@@ -9,12 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29a2f35999cb6244f99359153663dbba, type: 3}
-  m_Name: Hero 1
+  m_Script: {fileID: 11500000, guid: 3e1b117130c4425dac77719413ddc0aa, type: 3}
+  m_Name: 2
   m_EditorClassIdentifier: 
-  Name: Paladin
-  Descripton: Strong man
-  icon: {fileID: 21300000, guid: 954d79ad0f5124da59b33552ab47a641, type: 3}
-  level: 4
-  xp: 13
-  needXp: 1000
+  name: Hero 2
+  description: StrongWomen
+  icon: {fileID: 21300000, guid: a564258f7260e47d58e9ee37e2a3abb7, type: 3}
+  stats:
+  - nameStats: rewyhey
+    value: 0
+  - nameStats: gesdhg
+    value: 0
