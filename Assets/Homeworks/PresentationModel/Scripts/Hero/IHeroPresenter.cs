@@ -4,12 +4,12 @@
     public interface IHeroPresenter
     {
         string Name { get; }
-        string description { get; }
-        Sprite icon { get; }
-        int level { get; }
-        int xp { get; }
+        string Description { get; }
+        Sprite Icon { get; }
+        int Level { get; }
+        int Xp { get; }
         int RequiredExperience { get; }
-        CharacterStat[] characterStats { get; }
+        CharacterStat[] CharacterStats { get; }
     }
 
 

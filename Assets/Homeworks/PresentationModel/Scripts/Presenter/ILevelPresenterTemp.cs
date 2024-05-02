@@ -4,7 +4,7 @@ using System;
 
     public interface ILevelPresenterTemp
     {
-        public event Action dataChanged;
+        public event Action onDataChanged;
         
         public string LevelText { get; }
         public float Progress { get; }

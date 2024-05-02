@@ -1,20 +1,20 @@
 ﻿using UnityEngine;
+using UnityEngine.Serialization;
 
 
-    public class HeroPopupShowerf: MonoBehaviour
+public class HeroPopupShowerf: MonoBehaviour
     {
-        public HeroPopup heroPopup;
-        public IHeroPresenter heroPresenter;
+        public HeroPopup _heroPopup;
+        public IHeroPresenter _heroPresenter;
      
         public void Show(Hero _hero)
         {
-            heroPresenter = new HeroPresenter(_hero);
-            //heroPopup.Show(heroPresenter);
+            _heroPresenter = new HeroPresenter(_hero);
         }
 
         public void Hide()
         {
-            heroPopup.Hide();
+            _heroPopup.Hide();
         }
     }
 

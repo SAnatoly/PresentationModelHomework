@@ -18,7 +18,7 @@ using UnityEngine.UI;
         public void Render(ILevelPresenterTemp levelPresenter)
         {
             
-            levelPresenter.dataChanged += () => Refresh(levelPresenter);
+            levelPresenter.onDataChanged += () => Refresh(levelPresenter);
         }
 
         public void Refresh(ILevelPresenterTemp levelPresenter)

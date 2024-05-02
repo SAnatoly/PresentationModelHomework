@@ -3,21 +3,21 @@
 
     public class HeroPresenter : IHeroPresenter
     {
-        public string Name => hero.Name;
+        public string Name => Hero.Name;
 
-        public string description => hero.Descripton;
+        public string Description => Hero.Descripton;
 
-        public Sprite icon => hero.icon;
-        public int level => hero.level;
-        public int xp => hero.xp;
+        public Sprite Icon => Hero.icon;
+        public int Level => Hero.level;
+        public int Xp => Hero.xp;
         public int RequiredExperience { get; }
-        public CharacterStat[] characterStats => hero.stats;
+        public CharacterStat[] CharacterStats => Hero.stats;
 
-        private readonly Hero hero;
+        private readonly Hero Hero;
 
-        public HeroPresenter(Hero _hero)
+        public HeroPresenter(Hero hero)
         {
-            hero = _hero;
+            Hero = hero;
         }
     }
 

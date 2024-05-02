@@ -4,23 +4,22 @@ using UnityEngine;
 
 public class LevelPresenterTemp : ILevelPresenterTemp
     {
-        private readonly PlayerLevel level;
-        public event Action dataChanged; 
+        private readonly PlayerLevel _playerLevel;
+        public event Action onDataChanged; 
         
         public string LevelText { get; private set; }
         public float Progress { get; private set; }
         public string ProgressText { get; private set; }
 
-        public LevelPresenterTemp(PlayerLevel level)
+        public LevelPresenterTemp(PlayerLevel playerLevel)
         {
-            this.level = level;
-            Debug.Log(this.level.CurrentLevel);
+            _playerLevel = playerLevel;
             Refresh();
-            this.level.OnLevelUp += OnLevelUp;
-            this.level.OnExperienceChanged += OnExperienceChanged;
+            _playerLevel.OnLevelUp += PlayerLevelUp;
+            _playerLevel.OnExperienceChanged += OnExperienceChanged;
         }
 
-        private void OnLevelUp()
+        private void PlayerLevelUp()
         {
             Refresh();
         }
@@ -32,10 +31,10 @@ public class LevelPresenterTemp : ILevelPresenterTemp
         
         private void Refresh()
         {
-            LevelText = $"LVL: {level.CurrentLevel}";
-            ProgressText = $"XP: {level.CurrentExperience}/{level.RequiredExperience}";
-            Progress = level.CurrentExperience / (float)level.RequiredExperience;
+            LevelText = $"LVL: {_playerLevel.CurrentLevel}";
+            ProgressText = $"XP: {_playerLevel.CurrentExperience}/{_playerLevel.RequiredExperience}";
+            Progress = _playerLevel.CurrentExperience / (float)_playerLevel.RequiredExperience;
             Debug.Log("Refresh");
-            dataChanged?.Invoke();
+            onDataChanged?.Invoke();
         }
     }

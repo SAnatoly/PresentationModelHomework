@@ -1,38 +1,40 @@
 ﻿
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 
 public class HeroPopup: MonoBehaviour
     {
-        [SerializeField] private LevelView levelViewPrefab;
-        [SerializeField] private UserInfoView userInfoViewPrefab;
+        [SerializeField] private LevelView _levelViewPrefab;
+        [SerializeField] private UserInfoView _userInfoViewPrefab;
 
 
-        public LevelView levelView;
-        public UserInfoView userInfoView;
+        public LevelView _levelView;
+        public UserInfoView _userInfoView;
 
-        [SerializeField] private Button closeButton;
+        [SerializeField] private Button _closeButton;
 
-        [SerializeField] private GameObject popup;
+        [SerializeField] private GameObject _popup;
+        
         public void Start()
         {
-            popup.SetActive(false);
+            _popup.SetActive(false);
         }
 
         public void Show(IPlayerPresenter presenter)
         {
-            levelView.Refresh(presenter.LevelPresenter);
-            levelView.Render(presenter.LevelPresenter);
-            userInfoView.Show(presenter.InfoPresenter);
-            closeButton.onClick.AddListener(Hide);
-            popup.SetActive(true);
+            _levelView.Refresh(presenter.LevelPresenter);
+            _levelView.Render(presenter.LevelPresenter);
+            _userInfoView.Show(presenter.InfoPresenter);
+            _closeButton.onClick.AddListener(Hide);
+            _popup.SetActive(true);
         }
 
         public void Hide()
         {
-           popup.SetActive(false);
-           closeButton.onClick.RemoveListener(Hide);
+           _popup.SetActive(false);
+           _closeButton.onClick.RemoveListener(Hide);
         }
     }
 
